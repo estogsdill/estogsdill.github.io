@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hello World</title>
+    </head>
+        <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+        <style>
+            label{
+                display:block;
+            }
+        </style>
+    <body>
+        <form>
+            <label for="current_operator">Input:</label><input name="current_operator" id="current_operator" value="10">
+
+            <label for="total">Result:</label><div name="total" id="total"></div>
+        </form>
+        <py-script>
+            input_box = Element("current_operator")
+            current_operator = float(input_box.value)
+            result = Element("total")
+            result.write("Hello!  The input says: " + str(current_operator))
+        </py-script>
+    </body>
+</html>
